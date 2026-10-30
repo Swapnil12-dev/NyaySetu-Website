@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawyer Registration - Nyay Setu</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/forms.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>Lawyer Information Registration</h1>
+        <p>Tell us about your expertise to connect with the right clients.</p>
+    </header>
+
+    <main class="form-container">
+        <form id="lawyerInfoForm">
+            <fieldset>
+                <legend>Personal Details</legend>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Contact Email</label>
+                    <input type="email" id="contactEmail" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Professional Expertise</legend>
+                <div class="form-group">
+                    <label for="barID">Bar Council ID / License Number</label>
+                    <input type="text" id="barID" required>
+                </div>
+                <div class="form-group">
+                    <label for="practiceArea">Primary Practice Area (Specialty)</label>
+                    <select id="practiceArea" required>
+                        <option value="">-- Select Specialty --</option>
+                        <option value="criminal">Criminal Law</option>
+                        <option value="civil">Civil Litigation</option>
+                        <option value="family">Family Law</option>
+                        <option value="corporate">Corporate Law</option>
+                        <option value="property">Property Law</option>
+                        <option value="cyber">Cyber Law</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <input type="number" id="experience" min="1" required>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Location for Practice</legend>
+                <div class="form-group">
+                    <label for="city">Primary Practice City</label>
+                    <input type="text" id="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State/Region</label>
+                    <input type="text" id="state" required>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Save Profile & Go Live</button>
+            
+            <p id="statusMessage" class="status-message"></p>
+        </form>
+    </main>
+
+    <script src="../js/lawyerAuth.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

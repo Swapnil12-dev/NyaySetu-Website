@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Search - Nyay Setu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/main.css"> 
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+    <header class="bg-blue-700 text-white p-4 shadow-lg">
+        <h1 class="text-2xl font-bold">Nyay Setu - Find Legal Help</h1>
+    </header>
+
+    <main class="container mx-auto p-6">
+        <section class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Specify Your Case Details</h2>
+            <form id="clientSearchForm" class="space-y-4">
+
+                <div class="flex flex-col md:flex-row md:space-x-4">
+                    <div class="w-full md:w-1/2">
+                        <label for="clientCaseType" class="block text-sm font-medium text-gray-700">Type of Legal Problem:</label>
+                        <select id="clientCaseType" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" required>
+                            <option value="">-- Select Case Type --</option>
+                            <option value="criminal">Criminal Defense</option>
+                            <option value="civil">Civil Litigation</option>
+                            <option value="family">Family/Divorce</option>
+                            <option value="corporate">Business/Corporate</option>
+                            <option value="property">Property Disputes</option>
+                        </select>
+                    </div>
+
+                    <div class="w-full md:w-1/2 mt-4 md:mt-0">
+                        <label for="clientLocation" class="block text-sm font-medium text-gray-700">Your Location (City):</label>
+                        <input type="text" id="clientLocation" placeholder="e.g., Pune" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="caseDescription" class="block text-sm font-medium text-gray-700">Brief Description of Your Situation:</label>
+                    <textarea id="caseDescription" rows="3" placeholder="I need a lawyer because..." class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" required></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                    Find My Top 3 Matches
+                </button>
+            </form>
+        </section>
+
+        <section id="resultsContainer" class="mt-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">Top Matches</h2>
+            <div id="lawyerMatches" class="space-y-4">
+                <p class="text-center text-gray-500 p-6 bg-white rounded-lg shadow">Enter your details above to find the best matched lawyers.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/clientAuth.js"></script>
+ 
+</body>
+</html>

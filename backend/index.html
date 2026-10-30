@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyay Setu - Justice Bridge</title>
+    <!-- TAILWIND CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Your Custom CSS (for modal/overrides) -->
+    <link rel="stylesheet" href="styles/main.css"> 
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+    <!-- Navbar: Updated to use a single authentication link -->
+    <nav class="bg-blue-700 p-4 shadow-xl flex justify-between items-center sticky top-0 z-50">
+        <a href="index.html" class="text-white text-2xl font-extrabold tracking-wider">Nyay Setu</a>
+        <ul class="flex space-x-6 text-white text-lg">
+            <li><a href="pages/testimonials.html" class="hover:text-blue-200 transition">Testimonials</a></li>
+            <li><a href="#features" class="hover:text-blue-200 transition">Features</a></li>
+            
+            <!-- Unified Login/Signup Button -->
+            <li>
+                <a href="pages/auth.html" id="authLink" class="bg-white text-blue-700 py-1 px-4 rounded-full font-bold hover:bg-gray-200 transition">
+                    Login / Signup
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section bg-white border-b-2 border-gray-200 shadow-md">
+        <h1 class="text-6xl font-extrabold text-blue-800 mb-4">NYAY SETU</h1> 
+        <p class="text-xl text-gray-600 mb-8">Connecting clients to the justice they deserve.</p>
+        
+        <!-- Call to Action Button (Directs to the new Auth page) -->
+        <a href="pages/auth.html" class="bg-green-600 text-white text-lg py-3 px-8 rounded-full shadow-lg hover:bg-green-700 transition transform hover:scale-105">
+            Find Justice Now
+        </a>
+    </header>
+
+    <!-- Features Section Placeholder -->
+    <section id="features" class="p-16 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Key Features</h2>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-700">
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <p class="font-bold text-xl text-blue-600 mb-2">Secure Matching</p>
+                <p>Top 3 expert lawyers matched based on your case type and location.</p>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <p class="font-bold text-xl text-blue-600 mb-2">Geolocalized</p>
+                <p>Connect with practitioners authorized to serve in your specific region.</p>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <p class="font-bold text-xl text-blue-600 mb-2">Profile Management</p>
+                <p>Lawyers maintain robust profiles to showcase their verifiable experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- No need for js/main.js anymore since the modal is gone -->
+</body>
+</html>

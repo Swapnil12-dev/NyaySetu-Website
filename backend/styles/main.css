@@ -1,0 +1,166 @@
+/* styles/main.css */
+
+/* Custom styles for the Role Selection Modal on index.html */
+
+.hero-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f3f4f6; /* Light background */
+}
+
+/* Modal Overlay */
+.modal {
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background with transparency */
+    display: none; /* Hidden by default, shown by JS */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: #1a73e8;
+}
+
+/* Role Selection Buttons */
+.role-btn {
+    display: block;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.client-btn {
+    background-color: #1a73e8; /* Blue */
+    color: white;
+}
+
+.lawyer-btn {
+    background-color: #00a000; /* Green */
+    color: white;
+}
+
+.client-btn:hover {
+    background-color: #0d47a1;
+}
+
+.lawyer-btn:hover {
+    background-color: #007000;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+/* styles/main.css */
+
+
+.hero-image-container {
+    /* Placeholder image for a professional legal background */
+    /* FIX: Corrected the closing quote from backtick (`) to single quote (') */
+    background-image: url('https://images.squarespace-cdn.com/content/v1/667dcabb85e0e96c7fb1b616/b13595e3-e2af-42ee-8fa1-72da47d75d64/law-background.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh; /* Increased height for better visual impact */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Add a subtle overlay for text readability */
+    position: relative;
+}
+
+.hero-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-section {
+    position: relative;
+    z-index: 10; /* Ensure text is above the overlay */
+    padding: 80px 20px;
+    /* Ensure the text color is white for contrast */
+    color: white; 
+}
+
+
+/* --- 2. Animated Testimonials --- */
+
+/* Wrapper to hide the overflow and define the animation container */
+.scrolling-testimonials-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden; /* Hides cards outside the view */
+    white-space: nowrap; /* Keeps all cards on a single line */
+}
+
+/* Content area that moves */
+.scrolling-testimonials-content {
+    display: flex;
+    animation: scroll-left 40s linear infinite; /* 40s duration, continuous loop */
+}
+
+/* Individual card styling */
+.testimonial-card {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    padding: 20px 30px;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    min-width: 350px; /* Ensures cards are visible */
+    white-space: normal;
+    font-style: italic;
+    flex-shrink: 0; /* Prevents cards from shrinking */
+}
+
+/* Keyframe Animation: Moves the content from right to left */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%); /* Start position */
+    }
+    100% {
+        /* Move the entire width of one set of testimonials */
+        transform: translateX(-50%); 
+    }
+}
