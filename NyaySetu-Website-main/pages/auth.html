@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup - Nyay Setu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    
+    <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md">
+        
+        <div class="text-center mb-6">
+            <h1 class="text-3xl font-bold text-blue-700">Welcome to Nyay Setu</h1>
+            <p id="authPrompt" class="text-gray-500 mt-2">Please login to continue.</p>
+        </div>
+
+        <!-- Toggle Buttons -->
+        <div class="flex mb-6 border-b border-gray-200">
+            <button id="loginTab" class="flex-1 py-3 text-lg font-semibold border-b-2 border-blue-600 text-blue-600 transition-colors">Login</button>
+            <button id="signupTab" class="flex-1 py-3 text-lg font-semibold border-b-2 border-transparent text-gray-500 hover:text-blue-500 transition-colors">Signup</button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm" class="space-y-4">
+            <div class="form-group">
+                <label for="loginEmail" class="block text-sm font-medium text-gray-700">Email Address</label>
+                <input type="email" id="loginEmail" class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="loginPassword" class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500" required>
+            </div>
+            
+            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                Log In
+            </button>
+        </form>
+
+        <!-- SIGNUP FORM (Hidden by default) -->
+        <form id="signupForm" class="space-y-4 hidden">
+            <div class="form-group">
+                <label for="signupEmail" class="block text-sm font-medium text-gray-700">Email Address</label>
+                <input type="email" id="signupEmail" class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500" required>
+            </div>
+            <div class="form-group">
+                <label for="signupPassword" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="signupPassword" class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="signupRole" class="block text-sm font-medium text-gray-700">I am a:</label>
+                <select id="signupRole" class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500" required>
+                    <option value="client">Client (Seeking Legal Help)</option>
+                    <option value="lawyer">Lawyer (Offering Services)</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300">
+                Create Account
+            </button>
+        </form>
+
+        <p id="authStatusMessage" class="mt-6 p-3 text-center text-sm font-medium rounded-lg hidden"></p>
+        
+    </div>
+
+    <script src="../js/auth.js"></script>
+
+</body>
+</html>
